@@ -7,12 +7,50 @@ namespace Exam
     {
         public Car CreateOneCar()
         {
-            return null; // Ta bort denna rad. Den är här för att programmet inte ska ge kompileringsfel innan du gjort uppgiften.
+            Console.Write("Reg Number: ");
+            string regNum = Console.ReadLine();
+            Console.Write("Car Age (in years): ");
+            string buildYearString = Console.ReadLine();
+            
+            try 
+            {
+                int convertTest = Convert.ToInt32(buildYearString);
+            }
+            catch
+            {
+                throw new Exception("!!!!! Invalid Age !!!!!");
+            }
+            
+            Car newCar = new Car(regNum, buildYearString);
+            Console.WriteLine("Car Created Sucessfully!");
+            return newCar;
         }
 
         public List<Car> CreateThreeCars()
         {
-            return null; // Ta bort denna rad. Den är här för att programmet inte ska ge kompileringsfel innan du gjort uppgiften.
+            List <Car> carList = new List<Car>();
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Write("Reg Number: ");
+                string regNum = Console.ReadLine();
+                Console.Write("Car Age (in years): ");
+                string buildYearString = Console.ReadLine();
+                
+                try
+                {
+                    int buildYear = Convert.ToInt32(buildYearString);
+                }
+                catch
+                {
+                    throw new Exception("!!!!! Invalid Age !!!!!");
+                }
+
+                Car newCar = new Car(regNum, buildYearString);
+                Console.WriteLine("Car Created Sucessfully!");
+                carList.Add(newCar);
+            }
+            Console.WriteLine("Car List Created and Returned!");
+            return carList;
         }
     }
 }

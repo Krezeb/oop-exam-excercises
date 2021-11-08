@@ -6,6 +6,8 @@ namespace Exam
     {
         static void Main(string[] args)
         {
+            Create create = new Create();
+            create.CreateThreeCars();
         }
     }
 }
