@@ -11,7 +11,8 @@ metoden behöver komma åt.
 
 ## A
 Skapa ett interface som deklarerar alla metoder som behövs för att
-skapa en Todo. Låt sedan TodoCollection implementera interface:et och
+skapa en Todo. 
+Låt sedan TodoCollection implementera interface:et och
 ersätt parameter-typen CollectTodos så att den tar in en instans av
 interface:et i stället för en TodoCollection.
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Interfaces1
 {
-    class TodoCollection
+    class TodoCollection : ITodoCollection
     {
         private List<Todo> _todos;
 
@@ -24,9 +24,9 @@ namespace Interfaces1
             _todos.Add(todo);
         }
 
-        public List<Todo> ListTodos(bool isDone)
+        public List<IToDo> ListTodos(bool isDone)
         {
-            List<Todo> result = new List<Todo>();
+            List<IToDo> result = new List<IToDo>();
             foreach (Todo todo in _todos)
             {
                 if (todo.IsDone == isDone)

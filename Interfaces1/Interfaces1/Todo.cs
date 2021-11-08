@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Interfaces1
 {
-    class Todo
+    class Todo : IToDo
     {
         public string Text { get; init; }
-        public bool IsDone { get; private set; } = false;
+        public bool IsDone { get; set; } = false;
 
         public void MarkDone()
         {

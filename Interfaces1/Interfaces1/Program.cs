@@ -12,7 +12,7 @@ namespace Interfaces1
             PrintNonFinishedTodos(todoCollection);
         }
 
-        private static void CollectTodos(TodoCollection todoCollection)
+        private static void CollectTodos(IToDo todoCollection)
         {
             while (true)
             {

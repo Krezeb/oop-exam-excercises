@@ -18,7 +18,9 @@ namespace Exam
             }
             catch
             {
-                throw new Exception("!!!!! Invalid Age !!!!!");
+                //throw new Exception("!!!!! Invalid Age !!!!!"); // Not acceptable as answer. If question says to return null, you return null.
+                Console.WriteLine("!!!!! Invalid Age!!!!!");
+                return null;
             }
             
             Car newCar = new Car(regNum, buildYearString);

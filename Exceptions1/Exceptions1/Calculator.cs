@@ -19,8 +19,7 @@ namespace Exceptions1
                 {
                     break;
                 }
-                bool success = false;
-                success = int.TryParse(input, out int result);
+                bool success = int.TryParse(input, out int result);
                 if (success)
                 {
                     numbers.Add(result);
