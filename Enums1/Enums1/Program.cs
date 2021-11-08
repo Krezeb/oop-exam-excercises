@@ -9,10 +9,10 @@ namespace Enums1
         {
             OrderSystem orderSystem = new OrderSystem();
 
-            List<Sweater> smallSweaters = orderSystem.ListSweaters("Small");
+            List<Sweater> smallSweaters = orderSystem.ListSweaters(ClothesSize.S);
             Console.WriteLine($"We got {smallSweaters.Count} small sweaters");
 
-            orderSystem.AddSweater("Green sweater", "Large");
+            orderSystem.AddSweater("Green sweater", ClothesSize.L);
         }
     }
 }

@@ -10,13 +10,13 @@ namespace Enums1
         {
             _sweaters = new List<Sweater>()
             {
-                new Sweater() { Title = "Red sweater", Size = "Small" },
-                new Sweater() { Title = "Blue sweater", Size = "Small" },
-                new Sweater() { Title = "Christmas sweater", Size = "Medium" },
+                new Sweater() { Title = "Red sweater", Size = ClothesSize.S },
+                new Sweater() { Title = "Blue sweater", Size = ClothesSize.S },
+                new Sweater() { Title = "Christmas sweater", Size = ClothesSize.M },
             };
         }
 
-        public List<Sweater> ListSweaters(string size)
+        public List<Sweater> ListSweaters(ClothesSize size)
         {
             List<Sweater> result = new List<Sweater>();
             foreach (Sweater sweater in _sweaters)
@@ -29,7 +29,7 @@ namespace Enums1
             return result;
         }
 
-        public void AddSweater(string title, string size)
+        public void AddSweater(string title, ClothesSize size)
         {
             Sweater newSweater = new Sweater()
             {

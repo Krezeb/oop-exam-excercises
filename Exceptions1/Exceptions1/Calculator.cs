@@ -15,16 +15,31 @@ namespace Exceptions1
             {
                 Console.WriteLine("Enter a number or press enter to compute the average.");
                 string input = Console.ReadLine();
-
                 if (input == "")
                 {
                     break;
                 }
-
-                numbers.Add(Convert.ToInt32(input));
+                bool success = false;
+                success = int.TryParse(input, out int result);
+                if (success)
+                {
+                    numbers.Add(result);
+                    Console.WriteLine("Number Added Successfully...");
+                }
+                else
+                {
+                    Console.WriteLine("Du har angivit ett ogiltigt värde. Försök igen.");
+                    continue;
+                }
             }
 
             // Input done, now compute average
+            if (numbers.Count == 0)
+            {
+                Console.WriteLine($"The average is: 0");
+                return;
+            }
+
             int sum = 0;
             foreach (int number in numbers)
             {

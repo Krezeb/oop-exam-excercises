@@ -9,6 +9,6 @@ namespace Enums1
     class Sweater
     {
         public string Title { get; init; }
-        public string Size { get; init; }
+        public ClothesSize Size { get; init; }
     }
 }
