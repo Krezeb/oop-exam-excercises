@@ -6,6 +6,8 @@ namespace Exam
     {
         static void Main(string[] args)
         {
+            Conditions conditions = new Conditions();
+            conditions.Condition();
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace Exam
+﻿using System;
+
+namespace Exam
 {
     class Conditions
     {
@@ -12,12 +14,20 @@
 
         public void Condition()
         {
-            bool a = false; // Replace 'false' with your solution
-            bool b = false; // Replace 'false' with your solution
-            bool c = false; // Replace 'false' with your solution
-            bool d = false; // Replace 'false' with your solution
-            bool e = false; // Replace 'false' with your solution
-            bool f = false; // Replace 'false' with your solution
+            bool a = (i1 >= 30);                // Replace 'false' with your solution
+            bool b = (i1 < 0 && i2 > 100);      // Replace 'false' with your solution
+            bool c = (b1 == true || b2 == true);// Replace 'false' with your solution
+            bool d = (s1 == null);              // Replace 'false' with your solution
+            bool e = ((i1 < 20 && i1 > 10) || i3 == 100); // Replace 'false' with your solution
+            bool f = ((s1 == null || s2 == null) && i3 >= 200); // Replace 'false' with your solution
+
+            //Debug
+            Console.WriteLine($"a is {a}");
+            Console.WriteLine($"b is {b}");
+            Console.WriteLine($"c is {c}");
+            Console.WriteLine($"d is {d}");
+            Console.WriteLine($"e is {e}");
+            Console.WriteLine($"f is {f}");
         }
     }
 }
