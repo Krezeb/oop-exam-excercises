@@ -19,16 +19,25 @@ namespace Exceptions1
                 {
                     break;
                 }
-                bool success = int.TryParse(input, out int result);
-                if (success)
+                //bool success = int.TryParse(input, out int result);
+                //if (success)
+                //{
+                //    numbers.Add(result);
+                //    Console.WriteLine("Number Added Successfully...");
+                //}
+                //else
+                //{
+                //    Console.WriteLine("Du har angivit ett ogiltigt värde. Försök igen.");
+                //    continue;
+                //}
+                try
                 {
+                    int result = Convert.ToInt32(input);
                     numbers.Add(result);
-                    Console.WriteLine("Number Added Successfully...");
                 }
-                else
+                catch (Exception ex)
                 {
-                    Console.WriteLine("Du har angivit ett ogiltigt värde. Försök igen.");
-                    continue;
+                    Console.WriteLine($"Du har angivit ett ogiltigt värde. Försök igen. {ex.Message}");
                 }
             }
 
