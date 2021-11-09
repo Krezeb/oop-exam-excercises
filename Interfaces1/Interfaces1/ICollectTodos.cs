@@ -6,14 +6,8 @@ using System.Threading.Tasks;
 
 namespace Interfaces1
 {
-    public interface ITodoCollection
+    interface ICollectTodos
     {
-
-        public void CreateTodo(string text);
-
-
-        public List<IToDo> ListTodos(bool isDone);
+        public List<Todo> ListTodos(bool isDone);
     }
-
 }
-

@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace Interfaces1
 {
-    public interface IToDo
+    interface ICreateTodo
     {
-        public string Text { get; init; }
-        public bool IsDone { get; set; }
-
-        public void MarkDone();
-
-
+        public void CreateTodo(string text);
     }
 }
