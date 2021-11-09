@@ -7,7 +7,7 @@ ska adderas med 15. Början på listan borde vara:
 ```
 [0]: 1
 [1]: 2
-[2]: 1 // <- 3 är delbart med 3 så vi får: 3 / [1] => 3 / 2 = 1
+[2]: 6 // <- 3 är delbart med 3 så vi får: 3 * [1] => 3 * 2 = 6
 [3]: 4
 [4]: 20 // <- 5 är delbart med 5 så vi får: 5 + 15
 [5]: 6
