@@ -44,7 +44,8 @@ namespace Exam
                 }
                 catch
                 {
-                    throw new Exception("!!!!! Invalid Age !!!!!");
+                    Console.WriteLine("!!!!! Invalid Age!!!!!");
+                    return null;
                 }
 
                 Car newCar = new Car(regNum, buildYearString);
