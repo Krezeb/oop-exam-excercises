@@ -8,7 +8,8 @@ namespace Interfaces
 {
     internal class MyClass : IOutputProvider, IInputGatherer
     {
-        private static List<int> intList = new List<int>();
+        private List<int> intList = new List<int>();
+        //private static List<int> intList = new List<int>(); //Används om Svar B i program.cs körs
         private string outputString = "";
 
         public string GetOutput()
