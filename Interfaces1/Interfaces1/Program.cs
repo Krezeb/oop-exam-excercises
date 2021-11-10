@@ -12,7 +12,7 @@ namespace Interfaces1
             PrintNonFinishedTodos(todoCollection);
         }
 
-        private static void CollectTodos(IToDo todoCollection)
+        private static void CollectTodos(ICreateTodo todoCollection)
         {
             while (true)
             {
@@ -26,7 +26,7 @@ namespace Interfaces1
             }
         }
 
-        private static void PrintNonFinishedTodos(TodoCollection todoCollection)
+        private static void PrintNonFinishedTodos(ICollectTodos todoCollection)
         {
             List<Todo> todosToPrint = todoCollection.ListTodos(false);
             foreach (Todo todo in todosToPrint)

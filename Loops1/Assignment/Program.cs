@@ -7,45 +7,36 @@ namespace Assignment
         static void Main(string[] args)
         {
             int siffra = 0;
+            int countTo = 100;
+
             while (true)
             {
-                Console.WriteLine(("Mata in ett siffra:"));
-                string input = Console.ReadLine();
-                try
-                {
-                    siffra = Convert.ToInt32(input);
-                    if (siffra < -200 || siffra > 200)
-                    {
-                        Console.WriteLine("Skriva ett nytt tal...");
-                        continue;
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
-                catch
-                {
-                    Console.WriteLine("Ogiltig inmatning...");
-                    continue;
-                }
-            }
+                Console.WriteLine("Ange en siffra: ");
+                siffra = Convert.ToInt32(Console.ReadLine());
 
-            if (siffra > 100)
-            {
-                for (int i = siffra; i < 100; i--)
+                if (siffra < 200 && siffra > -200)
                 {
-                    Console.WriteLine($"Siffra: {i}");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Siffra för stor / Liten. Prova igen.");
                 }
             }
-            else if (siffra < 100)
+            if (siffra < 100)
             {
-                for (int i = 100; i < siffra; i++)
+                for (int i = siffra; i <= countTo; i++)
                 {
-                    Console.WriteLine($"Siffra: {i}");
+                    Console.WriteLine($"{i}");
                 }
             }
-           
+            else if (siffra > 100)
+            {
+                for (int i = siffra; i >= countTo; i--)
+                {
+                    Console.WriteLine($"{i}");
+                }
+            }
         }
     }
 }
