@@ -12,7 +12,16 @@ namespace Assignment
             while (true)
             {
                 Console.WriteLine("Ange en siffra: ");
-                siffra = Convert.ToInt32(Console.ReadLine());
+                try
+                {
+                    siffra = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Ogiltig tecken...");
+                    continue;
+                }
+                //siffra = Convert.ToInt32(Console.ReadLine());
 
                 if (siffra < 200 && siffra > -200)
                 {
