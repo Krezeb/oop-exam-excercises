@@ -6,7 +6,7 @@ namespace Interfaces
     {
         static void Main(string[] args)
         {
-            MyClass myClass = new MyClass();
+            MyClass myClass = new MyClass(); // Tillagt
             IInputGatherer gatherer = myClass; // Replace 'null' with your class
             IOutputProvider provider = myClass; // Replace 'null' with your class
 
