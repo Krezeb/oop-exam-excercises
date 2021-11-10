@@ -9,7 +9,7 @@ namespace Assignment
         static void Main(string[] args)
         {
             string inputGenre = "Programming"; //If Lines 14 + 15 are commented out, program will run as Assignment decrees with this variable.
-            string format = "{0,-30} {1,-20} {2}"; //String Formatting. Positive numbers are padding added to the end of the item.
+            string format = "{0,30} {1,-20} {2}"; //String Formatting. Positive numbers are padding added to the end of the item.
 
             Console.WriteLine("Input Genre to list: ");
             inputGenre = Console.ReadLine();
