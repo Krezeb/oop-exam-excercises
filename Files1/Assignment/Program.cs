@@ -9,7 +9,7 @@ namespace Assignment
         static void Main(string[] args)
         {
             string inputGenre = "Programming"; //If Lines 14 + 15 are commented out, program will run as Assignment decrees with this variable.
-            string format = "{0,30} {1,-20} {2}"; //String Formatting. Positive numbers are padding added to the end of the item.
+            string format = "{0,30} {1,-20} {2}"; //String Formatting.
 
             Console.WriteLine("Input Genre to list: ");
             inputGenre = Console.ReadLine();
@@ -38,9 +38,9 @@ namespace Assignment
                 if (book.Genre.ToLower() == inputGenre.ToLower())
                 {
                     string _title = book.Title;
-                    if (_title.Length > 30)
+                    if (_title.Length > 29)
                     {
-                        _title = book.Title.Substring(0, 29); //0 is the starting letter, 29 is the last.
+                        _title = book.Title.Substring(0, 29); //0 is the starting letter. Last letter is 29-1(substring here is 29 characters long)
                         //book.Title[..29]; //Shortening strings can be done like this aswell.
                     }
                     Console.WriteLine(format, _title, book.Author, book.Genre);
